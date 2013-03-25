@@ -18,6 +18,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
                         url(r'^', include("mylego.apps.pages_static.urls")),
+                        url(r'^', include("mylego.apps.user_authentication.urls")),
                         )
 
 

@@ -1,0 +1,10 @@
+{% extends "skeleton.html" %}
+{% block content %}
+        <form class="well" action='{% url "registration" %}' method="POST">
+            {% csrf_token %}
+            {{ registration_form.as_p}}
+            <input type="submit" class="btn" />
+{#            <button type="submit" class="btn">Log me in</button>#}
+        </form>
+
+{% endblock %}
