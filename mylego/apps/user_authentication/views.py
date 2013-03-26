@@ -61,6 +61,6 @@ def log_in(request):
     c = RequestContext(request, {'login_form': form, 'message': message})
     return HttpResponse(t.render(c))
 
-def logging_out(request):
+def log_out(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
