@@ -3,7 +3,7 @@
 
 
 {% else %}
-<form action='{% url "login" %}' method="POST" class="navbar-form pull-right" xmlns="http://www.w3.org/1999/html">
+<form action='{% url "index" %}' method="POST" class="navbar-form pull-right" xmlns="http://www.w3.org/1999/html">
    {% csrf_token %}
         {{ login_form.username }}
         {{ login_form.password }}
