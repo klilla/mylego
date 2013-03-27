@@ -28,8 +28,8 @@
             <a class="brand" href="{% url "index" %}">MyLego</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{% url "construction" %}">About</a></li>
+                    <li><a href="{% url "contact" %}">Contact</a></li>
                     {% if not user.is_authenticated %}
                     <li><a href="{% url "registration" %}">Registrate</a></li>
                     {% endif %}
@@ -52,7 +52,7 @@
     </footer>
 </div>
 <script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 
 </body>
 </html>

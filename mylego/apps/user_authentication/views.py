@@ -26,6 +26,10 @@ def registration(request):
             print form.is_valid()
     else:
         form = UserCreationForm()
+    form.fields['username'].widget.attrs = {'class':'span2', 'placeholder':'Username'}
+    form.fields['password1'].widget.attrs = {'class':'span2', 'placeholder':'Password'}
+    form.fields['password2'].widget.attrs = {'class':'span2', 'placeholder':'Repeat password'}
+
     t = loader.get_template('user_authentication/registration.html')
     c = RequestContext(request, {'registration_form': form})
     return HttpResponse(t.render(c))
